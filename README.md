@@ -1,3 +1,4 @@
+https://api.codemagic.io/apps/61c1a65868cc9c753d9e1e15/61c1a65868cc9c753d9e1e14/status_badge.svg
 # quick_chat
 
 A new Flutter project.
