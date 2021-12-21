@@ -1,4 +1,4 @@
-https://api.codemagic.io/apps/61c1a65868cc9c753d9e1e15/61c1a65868cc9c753d9e1e14/status_badge.svg
+[![Codemagic build status](https://api.codemagic.io/apps/61c1a65868cc9c753d9e1e15/61c1a65868cc9c753d9e1e14/status_badge.svg)](https://codemagic.io/apps/61c1a65868cc9c753d9e1e15/61c1a65868cc9c753d9e1e14/latest_build)
 # quick_chat
 
 A new Flutter project.
