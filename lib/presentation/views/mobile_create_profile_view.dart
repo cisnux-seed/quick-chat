@@ -154,6 +154,16 @@ class _MobileCreateProfileViewState extends State<MobileCreateProfileView> {
                         },
                         textInputAction: TextInputAction.done,
                         decoration: InputDecoration(
+                          errorBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: context.theme.colorScheme.primary,
+                            ),
+                          ),
+                          focusedErrorBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: context.theme.colorScheme.primary,
+                            ),
+                          ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: context.theme.colorScheme.primary,
