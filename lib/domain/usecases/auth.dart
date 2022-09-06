@@ -2,7 +2,10 @@ import 'dart:io';
 
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+<<<<<<< HEAD
 import 'package:flutter/services.dart';
+=======
+>>>>>>> 596eb1043fc9b328f27aa7bdde371b99c4ad67bf
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:quick_chat/utils/failures.dart';
 
@@ -29,8 +32,11 @@ class Auth {
           AuthFailure(error.message!),
         );
       }
+<<<<<<< HEAD
     } on PlatformException {
       return const Left(ConnectionFailure('Failed to connect the internet'));
+=======
+>>>>>>> 596eb1043fc9b328f27aa7bdde371b99c4ad67bf
     } on SocketException {
       return const Left(ConnectionFailure('Failed to connect the internet'));
     }
@@ -56,8 +62,11 @@ class Auth {
       }
     } on FirebaseAuthException catch (e) {
       return Left(AuthFailure(e.message!));
+<<<<<<< HEAD
     } on PlatformException {
       return const Left(ConnectionFailure('Failed to connect the internet'));
+=======
+>>>>>>> 596eb1043fc9b328f27aa7bdde371b99c4ad67bf
     } on SocketException {
       return const Left(ConnectionFailure('Failed to connect the internet'));
     }
@@ -77,8 +86,11 @@ class Auth {
       }
     } on FirebaseAuthException catch (e) {
       return Left(AuthFailure(e.message!));
+<<<<<<< HEAD
     } on PlatformException {
       return const Left(ConnectionFailure('Failed to connect the internet'));
+=======
+>>>>>>> 596eb1043fc9b328f27aa7bdde371b99c4ad67bf
     } on SocketException {
       return const Left(ConnectionFailure('Failed to connect the internet'));
     }
@@ -98,8 +110,11 @@ class Auth {
           AuthFailure(error.message!),
         );
       }
+<<<<<<< HEAD
     } on PlatformException {
       return const Left(ConnectionFailure('Failed to connect the internet'));
+=======
+>>>>>>> 596eb1043fc9b328f27aa7bdde371b99c4ad67bf
     } on SocketException {
       return const Left(ConnectionFailure('Failed to connect the internet'));
     }
@@ -122,7 +137,10 @@ class Auth {
           await firebaseAuth.signInWithCredential(credential);
           return const Right('success');
         } else {
+<<<<<<< HEAD
           await googleAuth.signOut();
+=======
+>>>>>>> 596eb1043fc9b328f27aa7bdde371b99c4ad67bf
           return const Left(
             AuthFailure(
               'Your email is already registered\ntry to login or use another account',
@@ -134,8 +152,11 @@ class Auth {
       }
     } on SocketException {
       return const Left(ConnectionFailure('Failed to connect the internet'));
+<<<<<<< HEAD
     } on PlatformException {
       return const Left(ConnectionFailure('Failed to connect the internet'));
+=======
+>>>>>>> 596eb1043fc9b328f27aa7bdde371b99c4ad67bf
     } catch (e) {
       await googleAuth.signOut();
       return Left(AuthFailure(e.toString()));
@@ -145,8 +166,11 @@ class Auth {
   Either<Failure, User?> currentUser() {
     try {
       return Right(firebaseAuth.currentUser);
+<<<<<<< HEAD
     } on PlatformException {
       return const Left(ConnectionFailure('Failed to connect the internet'));
+=======
+>>>>>>> 596eb1043fc9b328f27aa7bdde371b99c4ad67bf
     } on SocketException {
       return const Left(ConnectionFailure('Failed to connect the internet'));
     } catch (e) {

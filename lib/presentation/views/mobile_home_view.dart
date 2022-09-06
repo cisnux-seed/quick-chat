@@ -36,7 +36,13 @@ class _MobileHomeViewState extends State<MobileHomeView>
           .read<GetUserProfileCubit>()
           .fetchCurrentUserProfile(_currentUser!.uid);
     }
+<<<<<<< HEAD
     WidgetsBinding.instance.addObserver(this);
+=======
+    if (WidgetsBinding.instance != null) {
+      WidgetsBinding.instance!.addObserver(this);
+    }
+>>>>>>> 596eb1043fc9b328f27aa7bdde371b99c4ad67bf
     if (context.read<GetUserProfileCubit>().state
         is GetCurrentUserProfileSuccess) {
       if (_currentUserProfile != null) {
@@ -304,7 +310,13 @@ class _MobileHomeViewState extends State<MobileHomeView>
 
   @override
   void dispose() {
+<<<<<<< HEAD
     WidgetsBinding.instance.removeObserver(this);
+=======
+    if (WidgetsBinding.instance != null) {
+      WidgetsBinding.instance!.removeObserver(this);
+    }
+>>>>>>> 596eb1043fc9b328f27aa7bdde371b99c4ad67bf
     super.dispose();
   }
 

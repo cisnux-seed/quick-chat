@@ -6,7 +6,10 @@
         android:label="Quick Chat"
         android:icon="@mipmap/ic_launcher">
         <activity
+<<<<<<< HEAD
             android:exported="true"
+=======
+>>>>>>> 596eb1043fc9b328f27aa7bdde371b99c4ad67bf
             android:name=".MainActivity"
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"

@@ -1,14 +1,24 @@
 buildscript {
+<<<<<<< HEAD
     ext.kotlin_version = '1.6.21'
+=======
+    ext.kotlin_version = '1.6.0'
+>>>>>>> 596eb1043fc9b328f27aa7bdde371b99c4ad67bf
     repositories {
         google()
         mavenCentral()
     }
 
     dependencies {
+<<<<<<< HEAD
         classpath 'com.android.tools.build:gradle:7.1.2'
         classpath 'com.google.gms:google-services:4.3.10'
         classpath 'com.google.firebase:firebase-crashlytics-gradle:2.8.1'
+=======
+        classpath 'com.android.tools.build:gradle:4.1.0'
+        classpath 'com.google.gms:google-services:4.3.10'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.7.1'
+>>>>>>> 596eb1043fc9b328f27aa7bdde371b99c4ad67bf
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }

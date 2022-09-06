@@ -80,6 +80,7 @@ class _MobileCreateProfileViewState extends State<MobileCreateProfileView> {
                 }
               },
               builder: (context, auth) => Center(
+<<<<<<< HEAD
                 child: ConstrainedBox(
                   constraints: const BoxConstraints(maxWidth: 320),
                   child: Column(
@@ -144,6 +145,73 @@ class _MobileCreateProfileViewState extends State<MobileCreateProfileView> {
                       ),
                       const SizedBox(height: 16),
                       TextFormField(
+=======
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.only(top: 72, bottom: 16),
+                      height: 96,
+                      width: 96,
+                      child: dataPicker is ImagePickerSuccess &&
+                              dataPicker.imagePath != null
+                          ? CircleAvatar(
+                              backgroundImage: FileImage(
+                                File(dataPicker.imagePath!),
+                              ),
+                            )
+                          : IconButton(
+                              onPressed: () async {
+                                FocusScope.of(context).unfocus();
+                                await context
+                                    .read<DataPickerCubit>()
+                                    .pickImages();
+                              },
+                              icon: Icon(
+                                Icons.add_a_photo_rounded,
+                                color: context.theme.colorScheme.primary,
+                                size: 42,
+                              ),
+                            ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(48),
+                        border: Border(
+                          bottom: BorderSide(
+                            color: context.theme.colorScheme.primary,
+                          ),
+                          left: BorderSide(
+                            color: context.theme.colorScheme.primary,
+                          ),
+                          right: BorderSide(
+                            color: context.theme.colorScheme.primary,
+                          ),
+                          top: BorderSide(
+                            color: context.theme.colorScheme.primary,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Text(
+                      'Profile picture',
+                      style: context.theme.textTheme.headline5!.copyWith(
+                        color: context.theme.colorScheme.onBackground,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    Text(
+                      "Select your profile picture and\nenter your username",
+                      textAlign: TextAlign.center,
+                      style: context.theme.textTheme.bodyText1!.copyWith(
+                        color: context.theme.colorScheme.onBackground,
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    SizedBox(
+                      width: 320,
+                      height: 60,
+                      child: TextFormField(
+>>>>>>> 596eb1043fc9b328f27aa7bdde371b99c4ad67bf
                         keyboardType: TextInputType.text,
                         controller: _usernameController,
                         validator: (value) {
@@ -180,6 +248,7 @@ class _MobileCreateProfileViewState extends State<MobileCreateProfileView> {
                           ),
                         ),
                       ),
+<<<<<<< HEAD
                       const SizedBox(height: 16),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
@@ -220,6 +289,48 @@ class _MobileCreateProfileViewState extends State<MobileCreateProfileView> {
                       const SizedBox(height: 16),
                     ],
                   ),
+=======
+                    ),
+                    const SizedBox(height: 16),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        fixedSize: const Size(320, 50),
+                      ),
+                      onPressed: () async {
+                        if (_formKey.currentState!.validate()) {
+                          if (dataPicker is DataPickerEmpty) {
+                            if (_currentUser != null) {
+                              await context.read<AuthCubit>().createProfile(
+                                    user: UserModel(
+                                      isOnline: true,
+                                      id: _currentUser!.uid,
+                                      username: _usernameController.text,
+                                      email: _currentUser!.email!,
+                                      lastSeen: Timestamp.now(),
+                                    ),
+                                  );
+                            }
+                          } else if (dataPicker is ImagePickerSuccess) {
+                            if (_currentUser != null) {
+                              await context.read<AuthCubit>().createProfile(
+                                    user: UserModel(
+                                      isOnline: true,
+                                      id: _currentUser!.uid,
+                                      username: _usernameController.text,
+                                      email: _currentUser!.email!,
+                                      lastSeen: Timestamp.now(),
+                                    ),
+                                    imagePath: dataPicker.imagePath,
+                                  );
+                            }
+                          }
+                        }
+                      },
+                      child: const Text('Create'),
+                    ),
+                    const SizedBox(height: 16),
+                  ],
+>>>>>>> 596eb1043fc9b328f27aa7bdde371b99c4ad67bf
                 ),
               ),
             ),

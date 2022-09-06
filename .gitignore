@@ -44,5 +44,8 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+<<<<<<< HEAD
 
 coverage
+=======
+>>>>>>> 596eb1043fc9b328f27aa7bdde371b99c4ad67bf

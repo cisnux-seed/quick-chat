@@ -42,8 +42,13 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (_) => locator<GetCurrentUserCubit>()),
         BlocProvider(create: (_) => locator<UpdateUserProfileCubit>()),
       ],
+<<<<<<< HEAD
       child: MaterialApp.router(
         // navigatorObservers: [kRouteObserver],
+=======
+      child: GetMaterialApp(
+        navigatorObservers: [kRouteObserver],
+>>>>>>> 596eb1043fc9b328f27aa7bdde371b99c4ad67bf
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           textSelectionTheme: TextSelectionThemeData(

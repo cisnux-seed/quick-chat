@@ -152,10 +152,17 @@ class RemoteDataSourceImpl implements RemoteDataSource {
       if (result == null) {
         final data = await firestore.collection('rooms').add(room.toJson());
         final response = await data.get();
+<<<<<<< HEAD
         final Map<String, dynamic> json = {'id': data.id}
           ..addAll(response.data()!);
 
         return RoomModel.fromJson(json);
+=======
+        final Map<String, dynamic>? json = {'id': data.id}
+          ..addAll(response.data()!);
+
+        return RoomModel.fromJson(json!);
+>>>>>>> 596eb1043fc9b328f27aa7bdde371b99c4ad67bf
       } else {
         final response = result.first;
         return response;
