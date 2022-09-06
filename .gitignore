@@ -31,6 +31,9 @@
 .pub/
 /build/
 
+# linux
+linux
+
 # Web related
 web
 lib/generated_plugin_registrant.dart
