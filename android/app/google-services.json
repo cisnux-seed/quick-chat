@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "353629765080",
+    "project_id": "quick-chat-b5bbd",
+    "storage_bucket": "quick-chat-b5bbd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:353629765080:android:8ea83f52ef7d0024b906ad",
+        "android_client_info": {
+          "package_name": "com.example.quick_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "353629765080-htot3uf0blruav5ebhqfc54djr81qkfk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.quick_chat",
+            "certificate_hash": "3c1191f55d2ada5ca28f07e18427edf3fd6b27f2"
+          }
+        },
+        {
+          "client_id": "353629765080-rior9t4k3ov68ppfcsl2ij892i91tett.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.quick_chat",
+            "certificate_hash": "e683b3ef0b3e807e5c305a2dd18150306af137fa"
+          }
+        },
+        {
+          "client_id": "353629765080-puhohh80f6k3hlj0ch18qaf0r506dj1g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBBxOCU78kIrFuu7_sKrnAodZfZV2X3sY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "353629765080-puhohh80f6k3hlj0ch18qaf0r506dj1g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
